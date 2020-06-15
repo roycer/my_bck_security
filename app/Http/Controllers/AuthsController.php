@@ -29,8 +29,6 @@ class AuthsController extends Controller {
         }
     }
 
-
-
     public function valid(Request $request){
         if($request->user()) {
             Log::info($request->user());

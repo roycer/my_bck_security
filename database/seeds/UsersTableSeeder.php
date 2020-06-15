@@ -15,15 +15,31 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'username' => 'roycer',
-                'password' => Hash::make('roycer2018')
+                'password' => Hash::make('rcordova|SYS01')
             ],
             [
-                'username' => 'operador',
-                'password' => Hash::make('123456')
+                'username' => 'comedor',
+                'password' => Hash::make('comedor-C001')
             ],
             [
                 'username' => 'soporte',
-                'password' => Hash::make('Soporte2018')
+                'password' => Hash::make('soporte|SYS01')
+            ],
+            [
+                'username' => 'planta',
+                'password' => Hash::make('Planta-2020')
+            ],
+            [
+                'username' => 'ebruno',
+                'password' => Hash::make('e123456')
+            ],
+            [
+                'username' => 'yoselin',
+                'password' => Hash::make('aten-2001')
+            ],
+            [
+                'username' => 'emmy',
+                'password' => Hash::make('aten-2002')
             ]
         ]);
     }

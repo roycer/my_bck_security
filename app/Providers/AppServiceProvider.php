@@ -20,9 +20,9 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->register(\Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 
-        if ($this->app->environment() == 'local') {
-            $this->app->register('Wn\Generators\CommandsServiceProvider');
-        }
+//        if ($this->app->environment() == 'local') {
+//            $this->app->register('Wn\Generators\CommandsServiceProvider');
+//        }
 
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);

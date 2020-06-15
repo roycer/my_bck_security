@@ -23,16 +23,6 @@ $router->group(['prefix' => 'api/v1/'], function ($router) {
     $router->post('login','AuthsController@authenticate');
     $router->post('valid','AuthsController@valid');
 
-    /**
-     * Routes for resource weights
-     */
-    $router->get('comx510', 'WeightsController@all');
-//    $router->get('weights/{id}', 'WeightsController@get');
-    $router->post('weights', 'WeightsController@add');
-//    $router->put('weights/{id}', 'WeightsController@put');
-//    $router->put('weights/{id}', 'WeightsController@put');
-    $router->delete('weights/{id}', 'WeightsController@remove');
-
 });
 
 
