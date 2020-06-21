@@ -19,6 +19,9 @@ class CreateUsersPeopleTable extends Migration
             $table->integer('id_people')->nullable();
             $table->string('database')->nullable();
 
+            $table->integer('id_users')->unsigned();
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
             $table->softDeletes();
         });

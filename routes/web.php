@@ -23,6 +23,7 @@ $router->group(['prefix' => 'api/v1/'], function ($router) {
     $router->post('login','AuthsController@authenticate');
     $router->post('valid','AuthsController@valid');
 
+    $router->get('modules','UsersController@modules');
 });
 
 

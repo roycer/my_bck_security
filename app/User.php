@@ -39,7 +39,9 @@ class User extends Model implements JWTSubject, Authenticatable
         return ['user'=>$this];
     }
 
-    public function locations(){
-        return $this->hasMany('App\Location','id_user');
+    public function groups(){
+        return $this->hasMany('App\UserGroup','id_users');
     }
+
+
 }
