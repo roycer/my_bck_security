@@ -68,6 +68,10 @@ class ModulesTableSeeder extends Seeder
             [
                 'id' => 14,
                 'name' => 'Microbalanza',
+            ],
+            [
+                'id' => 15,
+                'name' => 'Empleados Check',
             ]
         ]);
     }
