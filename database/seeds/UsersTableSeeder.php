@@ -14,32 +14,44 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'username' => 'roycer',
-                'password' => Hash::make('rcordova|SYS01')
+                'username' => 'admin',
+                'password' => Hash::make('mysac')
             ],
             [
-                'username' => 'comedor',
-                'password' => Hash::make('comedor-C001')
-            ],
-            [
-                'username' => 'soporte',
-                'password' => Hash::make('soporte|SYS01')
+                'username' => 'gerencia',
+                'password' => Hash::make('mysac')
             ],
             [
                 'username' => 'planta',
-                'password' => Hash::make('Planta-2020')
+                'password' => Hash::make('mysac')
             ],
             [
-                'username' => 'ebruno',
-                'password' => Hash::make('e123456')
+                'username' => 'administracion',
+                'password' => Hash::make('mysac')
             ],
             [
-                'username' => 'yoselin',
-                'password' => Hash::make('aten-2001')
+                'username' => 'acliente',
+                'password' => Hash::make('mysac')
             ],
             [
-                'username' => 'emmy',
-                'password' => Hash::make('aten-2002')
+                'username' => 'comedor',
+                'password' => Hash::make('mysac')
+            ],
+            [
+                'username' => 'soporte',
+                'password' => Hash::make('mysac')
+            ],
+            [
+                'username' => 'lquimico',
+                'password' => Hash::make('mysac')
+            ],
+            [
+                'username' => 'canchas',
+                'password' => Hash::make('mysac')
+            ],
+            [
+                'username' => 'liquidacion',
+                'password' => Hash::make('mysac')
             ]
         ]);
     }

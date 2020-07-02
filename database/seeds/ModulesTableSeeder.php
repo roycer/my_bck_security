@@ -14,16 +14,60 @@ class ModulesTableSeeder extends Seeder
     {
         DB::table('modules')->insert([
             [
-                'name' => 'Armar Pilas',
+                'id' => 1,
+                'name' => 'Viajes',
             ],
             [
-                'name' => 'Pilas Creadas',
+                'id' => 2,
+                'name' => 'Vehiculos',
             ],
             [
-                'name' => 'Balance',
+                'id' => 3,
+                'name' => 'Asistencia',
             ],
             [
-                'name' => 'Producto',
+                'id' => 4,
+                'name' => 'Empleados',
+            ],
+            [
+                'id' => 5,
+                'name' => 'Empresas',
+            ],
+            [
+                'id' => 6,
+                'name' => 'Ingreso de Comensales',
+            ],
+            [
+                'id' => 7,
+                'name' => 'Control de Comensales',
+            ],
+            [
+                'id' => 8,
+                'name' => 'Planta - Producto',
+            ],
+            [
+                'id' => 9,
+                'name' => 'Planta - Stock de Productos',
+            ],
+            [
+                'id' => 10,
+                'name' => 'Planta - Balance',
+            ],
+            [
+                'id' => 11,
+                'name' => 'Planta - Parametros',
+            ],
+            [
+                'id' => 12,
+                'name' => 'Planta - Lotes en Pila',
+            ],
+            [
+                'id' => 13,
+                'name' => 'Planta - Lotes para Pila',
+            ],
+            [
+                'id' => 14,
+                'name' => 'Microbalanza',
             ]
         ]);
     }

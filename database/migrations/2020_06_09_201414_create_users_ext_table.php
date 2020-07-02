@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersPeopleTable extends Migration
+class CreateUsersExtTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateUsersPeopleTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_people', function (Blueprint $table) {
+        Schema::create('users_ext', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('id_company')->nullable();
             $table->integer('id_people')->nullable();
             $table->string('database')->nullable();
 
@@ -34,6 +35,6 @@ class CreateUsersPeopleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_people');
+        Schema::dropIfExists('users_ext');
     }
 }

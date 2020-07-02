@@ -17,7 +17,7 @@ class CreateGroupsModulesTable extends Migration
             $table->increments('id');
 
             $table->boolean('create')->default(false)->nullable();
-            $table->boolean('ready')->default(false)->nullable();
+            $table->boolean('view')->default(false)->nullable();
             $table->boolean('update')->default(false)->nullable();
             $table->boolean('delete')->default(false)->nullable();
 
