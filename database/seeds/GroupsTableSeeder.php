@@ -44,6 +44,14 @@ class GroupsTableSeeder extends Seeder
             [
                 'id' => 8,
                 'name' => 'CANCHAS',
+            ],
+            [
+                'id' => 9,
+                'name' => 'SEGURIDAD',
+            ],
+            [
+                'id' => 10,
+                'name' => 'TOPICO',
             ]
         ]);
     }
