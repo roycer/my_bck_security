@@ -2,6 +2,7 @@
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -20,6 +21,26 @@ class UsersController extends Controller
 
         $user = User::where('id',$request->user()->id)->with(['groups','groups.group','groups.group.modules'])->get()->first();
         return response()->json(['status' => 'success','result' => $user]);
+
+    }
+
+    public function password(Request $request){
+
+        $this->validate($request, [
+            'password' => 'required'
+        ]);
+
+        $user = User::find($request->user()->id);
+
+        if($user){
+            $user->password =  Hash::make($request->password);
+            if($user->save()){
+                return response()->json(['status' => 'success','result' => '']);
+            }
+
+        }
+
+        return response()->json(['status' => 'fail','result' => '']);
 
     }
 

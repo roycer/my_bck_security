@@ -24,6 +24,7 @@ $router->group(['prefix' => 'api/v1/'], function ($router) {
     $router->post('valid','AuthsController@valid');
 
     $router->get('modules','UsersController@modules');
+    $router->put('password','UsersController@password');
 });
 
 
