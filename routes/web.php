@@ -61,6 +61,15 @@ $router->group(['prefix' => 'api/v1/'], function ($router) {
     $router->post('user-groups', 'UserGroupsController@add');
     $router->put('user-groups/{id}', 'UserGroupsController@put');
     $router->delete('user-groups/{id}', 'UserGroupsController@remove');
+
+    /**
+     * GroupModules
+     */
+    $router->get('group-modules', 'GroupModulesController@all');
+    $router->get('group-modules/{id}', 'GroupModulesController@get');
+    $router->post('group-modules', 'GroupModulesController@add');
+    $router->put('group-modules/{id}', 'GroupModulesController@put');
+    $router->delete('group-modules/{id}', 'GroupModulesController@remove');
 });
 
 
