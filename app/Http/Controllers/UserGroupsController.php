@@ -22,12 +22,21 @@ class UserGroupsController extends Controller {
     public function add(Request $request)
     {
         $this->validate($request,[
-            'groupUsers.*.id' => 'nullable',
-            'groupUsers.*.id_users' => 'required',
-            'groupUsers.*.id_groups' => 'required',
+            'role_users.*.id' => 'nullable',
+            'role_users.*.id_users' => 'required',
+            'role_users.*.id_groups' => 'required',
         ]);
 
-        foreach($request->groupUsers as $group_user){
+        $users = [];
+        foreach($request->role_users as $user){
+            array_push($users, $user['id_users']);
+        }
+
+        if(count($users) > count(array_unique($users))){
+            return response()->json(['status' => 'fail','result' => 'No puede registrar un usuario repetido'],500);
+        }
+
+        foreach($request->role_users as $group_user){
             $group_user_update = UserGroup::where('id', $group_user['id'])->first();
 
             if($group_user_update){
@@ -36,9 +45,6 @@ class UserGroupsController extends Controller {
                 $group_user_update->save();
             }
             else{
-                if(UserGroup::where('id_users',$group_user['id_users'])->where('id_groups',$group_user['id_groups'])->first()){
-                    return response()->json(['status' => 'fail','result' => 'El usuario ya fue registrado en este grupo'],500);
-                }
                 $new_group_user = new UserGroup;
                 $new_group_user->id_users = $group_user['id_users'];
                 $new_group_user->id_groups = $group_user['id_groups'];
