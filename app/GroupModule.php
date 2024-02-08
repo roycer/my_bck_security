@@ -13,6 +13,19 @@ class GroupModule extends Model {
 
     protected $dates = [];
 
+    protected $casts = [
+        'id' => 'integer',
+        'sec_create' => 'boolean',
+        'sec_view' => 'boolean',
+        'sec_update' => 'boolean',
+        'sec_delete' => 'boolean',
+        'id_groups' => 'integer',
+        'id_modules' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime'
+    ];
+
     public static $rules = [
         // Validation rules
     ];

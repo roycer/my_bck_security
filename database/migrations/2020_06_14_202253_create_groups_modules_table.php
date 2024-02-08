@@ -16,10 +16,10 @@ class CreateGroupsModulesTable extends Migration
         Schema::create('groups_modules', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->boolean('create')->default(false)->nullable();
-            $table->boolean('view')->default(false)->nullable();
-            $table->boolean('update')->default(false)->nullable();
-            $table->boolean('delete')->default(false)->nullable();
+            $table->boolean('sec_create')->default(false)->nullable();
+            $table->boolean('sec_view')->default(false)->nullable();
+            $table->boolean('sec_update')->default(false)->nullable();
+            $table->boolean('sec_delete')->default(false)->nullable();
 
             $table->integer('id_groups')->unsigned();
             $table->foreign('id_groups')->references('id')->on('groups')->onDelete('cascade');

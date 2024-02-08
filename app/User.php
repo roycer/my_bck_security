@@ -22,6 +22,16 @@ class User extends Model implements JWTSubject, Authenticatable
      */
     protected $fillable = [];
 
+    protected $casts = [
+        'id' => 'integer',
+        'username' => 'string',
+        'password' => 'string',
+        'remember_token' => 'string',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime'
+    ];
+
     /**
      * The attributes excluded from the model's JSON form.
      *

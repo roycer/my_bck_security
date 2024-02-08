@@ -13,6 +13,15 @@ class UserGroup extends Model {
 
     protected $dates = [];
 
+    protected $casts = [
+        'id' => 'integer',
+        'id_groups' => 'integer',
+        'id_users' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime'
+    ];
+
     public static $rules = [
         // Validation rules
     ];

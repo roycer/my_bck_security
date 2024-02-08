@@ -13,6 +13,15 @@ class Group extends Model {
 
     protected $dates = [];
 
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'code' => 'string',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime'
+    ];
+
     public static $rules = [
         // Validation rules
     ];
